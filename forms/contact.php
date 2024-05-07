@@ -18,7 +18,7 @@ try {
     $mail->Port       = 465;
 
     // Quem está enviando o e-mail
-    $mail->setFrom('noreply@rentstay.com.br', 'Rent Stay Formulario de Contato');
+    $mail->setFrom('noreply@rentstay.com.br', 'Formulario de Contato');
 
     // Destinatário
     $mail->addAddress('contato@rentstay.com.br', 'formulario de contato');
