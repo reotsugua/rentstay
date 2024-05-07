@@ -2,7 +2,8 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'vendor/autoload.php';
+
+require '../vendor/autoload.php';
 
 $mail = new PHPMailer(true);
 
@@ -30,6 +31,6 @@ try {
     $mail->send();
     echo 'OK';
 } catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    echo "A mensagem não pôde ser enviada. Erro de envio: {$mail->ErrorInfo}";
 }
 ?>

@@ -14,7 +14,7 @@
       let recaptcha = thisForm.getAttribute('data-recaptcha-site-key');
       
       if( ! action ) {
-        displayError(thisForm, 'The form action property is not set!');
+        displayError(thisForm, 'A propriedade de ação do formulário não está definida!');
         return;
       }
       thisForm.querySelector('.loading').classList.add('d-block');
@@ -64,7 +64,7 @@
         thisForm.querySelector('.sent-message').classList.add('d-block');
         thisForm.reset(); 
       } else {
-        throw new Error(data ? data : 'Form submission failed and no error message returned from: ' + action); 
+        throw new Error(data ? data : 'O envio do formulário falhou e nenhuma mensagem de erro foi retornada de: ' + action); 
       }
     })
     .catch((error) => {
