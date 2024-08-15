@@ -54,7 +54,7 @@ function limparCNPJ(cnpj) {
 
 function fetchEmpresaData(cnpj) {
     // Chamada à API da ReceitaWS com o CNPJ limpo
-    fetch(`https://receitaws.com.br/v1/cnpj/${cnpj}`)
+    fetch(`https://corsbypass-5jyi.onrender.com/https://receitaws.com.br/v1/cnpj/${cnpj}`)
         .then(response => response.json())
         .then(data => {
             // Preenche os dados no modal
@@ -71,5 +71,5 @@ function fetchEmpresaData(cnpj) {
             var modal = new bootstrap.Modal(document.getElementById('empresaModal'));
             modal.show();
         })
-        .catch(error => console.error('Erro ao buscar dados:', error));
+        .catch(error => alert(error));
 }
